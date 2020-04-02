@@ -67,10 +67,10 @@ fig = plt.figure(1, figsize=(16, 9))
 plt.plot(dates, line_H, 'r', label="2005-2014 record high temp")
 plt.plot(dates, line_L, 'b', label="2005-2014 record low temp")
 plt.gca().fill_between(range(len(dates)), line_L, line_H, facecolor='red', alpha=0.2)
-plt.scatter(scatter_H['delta'], scatter_H['Data_Value2015'], s=5,
-            c='red', label='2015 record high temp. above the 2005-2014 record')
-plt.scatter(scatter_L['delta'], scatter_L['Data_Value2015'], s=5,
-            c='blue', label='2015 record low temp. below the 2005-2014 record')
+plt.scatter(scatter_H['delta'], scatter_H['Data_Value2015'], marker='^',
+            s=15, c='red', label='2015 record high temp. above the 2005-2014 record')
+plt.scatter(scatter_L['delta'], scatter_L['Data_Value2015'], marker='v',
+            s=15, c='blue', label='2015 record low temp. below the 2005-2014 record')
 
 plt.xlabel('Days of a year (exclude leap day)', fontsize=14)
 plt.ylabel("Temperature in degree Celcius", fontsize=14)
